@@ -1,6 +1,6 @@
 {
   "name": "dsh-tokenrhythm-bill",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "基元律动费用中心：账户余额与限时额度、按分类筛选的模型价格卡（含折扣价）、本机凭据池（API Key + Cookie 的保存/选用/删除）；另有 ZCode 页签展示桌面端套餐额度与活动领取。凭据只存本机 host。",
   "type": "module",
   "main": "lib/index.js",
