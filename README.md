@@ -112,6 +112,7 @@ dsh plugin --profile web remove dsh-tokenrhythm-bill
 |---|---|
 | 侧栏没有「基元费用」条目 | 装完要**重启 DSH**；确认插件已安装：`dsh plugin --profile web list` |
 | 密钥页值显示为掩码（`sk_tr…(49)`） | 插件后台还没换新版本：**重启 DSH** 一次即可 |
+| 重启后提示「settings.yaml 里没有配置基元律动（tokenrhythm）提供商」 | DSH 0.2 宿主启动时会把 `~/.dsh/settings.yaml` 一次性迁移进 profile 并改名为 `settings.yaml.imported`，该文件此后不再存在。**0.7.1 起**插件按 `settings.yaml` → `profiles/*/cordis.patch.yml` → `settings.yaml.imported` 依次取名册；出现该提示说明后台仍是 0.7.0 及更早版本，升级并重启即可（面板会显示 `/manifest` 的 `source` 字段用于确认取自哪个文件） |
 | 侧栏条目疑似引发界面卡顿/异常 | 设环境变量 `DSH_TOKENRHYTHM_NO_SIDEBAR=1` 后重启 DSH，插件会跳过侧栏条目注入（面板本体照常加载），据此二分定位 |
 | 余额显示「会话已过期」 | 到「密钥」页更新该条 Cookie，或到设置页用账号密码重新登录 |
 | 切换凭据后图表变 ¥0 | 余额/用量按身份隔离：切到没数据的凭据自然为空，切回原凭据即恢复 |
